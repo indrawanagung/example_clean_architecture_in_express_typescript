@@ -11,6 +11,7 @@ Rule of Clean Architecture System by Uncle Bob
 - Independent of Database. You can swap out Oracle or SQL Server, for Mongo, BigTable, CouchDB, or something else. Your business rules are not bound to the database.
 - Independent of any external agency. In fact your business rules simply don’t know anything at all about the outside world.
 
+
 #### The diagram:
 
 ![golang clean architecture](https://blog.cleancoder.com/uncle-bob/images/2012-08-13-the-clean-architecture/CleanArchitecture.jpg)
@@ -31,8 +32,8 @@ In this project, I use postgresql to store note and status data. To help me in d
 
 To use Golang-Migrate in Express application, simply define command filepath and put all migration scripts in  `db/migrations`  under resources folder.
 ```bash
-### How To Run This Project
-$ ```migrate create -ext sql -dir db/migrations -seq create_users_table
+### Create migration file using golang-migrate
+$ migrate create -ext sql -dir db/migrations -seq create_users_table
 ```
 
 ### Tools Used:
@@ -53,34 +54,34 @@ In this project, I use some tools listed below. But you can use any simmilar lib
 Inside the project repository, running command `make postgres` to create and running container postgres database
 ```bash
 ### Run Docker Postgre SQL Image 
-$ ```make postgres
+$ make postgres
 ```
 #### Create Database Notes
 To create database notes, running command `make createdb` or you can setting this configuration on Makefile `./Makefile`
 ```bash
 ### Create Database Notes on Posgre SQL
-$ ```make postgres
+$ make createdb
 ```
 #### Run Migration Schema
 Run command `make migrateup` to create all schema to database notes automatically in file `db/migrations`. If you want to rollback all schema, run command `make migratedown`
 ```bash
 ### Create all schema to database notes
-$ ```make postgres
+$ make migrateup
 ```
 #### Install All Dependency
 To install all dependency in this project, run command `npm install`
 ```bash
 ### Install all dependency
-$ ```npm install
+$ npm install
 ```
 #### Run Server API
 Running express server api using command `npm start`
 ```bash
 ### Running Server API
-$ ```npm start
+$ npm start
 ```
 #### Running All Unit and Integration Test
 ```bash
 ### Running all test using jest and supertest
-$ ```npm test
+$ npm run test
 ```
