@@ -51,13 +51,13 @@ In this project, I use some tools listed below. But you can use any simmilar lib
 - Install Golang Migrate https://github.com/golang-migrate/migrate/tree/master/cmd/migrate
 - Install Express JS https://expressjs.com/
 #### Running Docker Postgre Image
-Inside the project repository, running command `make postgres` to create and running container postgres database
+Inside the project repository, run command `make postgres` to create and run container postgres database
 ```bash
 ### Run Docker Postgre SQL Image 
 $ make postgres
 ```
 #### Create Database Notes
-To create database notes, running command `make createdb` or you can setting this configuration on Makefile `./Makefile`
+To create database notes, run command `make createdb` or you can setting this configuration on Makefile `./Makefile`
 ```bash
 ### Create Database Notes on Posgre SQL
 $ make createdb
@@ -75,12 +75,12 @@ To install all dependency in this project, run command `npm install`
 $ npm install
 ```
 #### Run Server API
-Running express server api using command `npm start`
+Run express server api using command `npm start`
 ```bash
 ### Running Server API
 $ npm start
 ```
-#### Running All Unit and Integration Test
+#### Run All Unit and Integration Test
 ```bash
 ### Running all test using jest and supertest
 $ npm run test
