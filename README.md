@@ -1,4 +1,4 @@
-# Clean Architecture API With Express Typescript
+# Clean Architecture API In Express Typescript
 
 ## Description
 This project is a simple code for clean architecture pattern using Express Typescript and TypeORM.
